@@ -3,226 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hinojosa Masonic Heritage | Productos</title>
-  <!-- Meta tags para SEO -->
-  <meta name="description" content="Catálogo exclusivo de Hinojosa Masonic Heritage. Tradición y distinción en cada pieza.">
+  <title>Hinojosa Masonic Heritage | Home</title>
   
+  <!-- SEO: Metadatos básicos para posicionamiento -->
+  <meta name="description" content="Colección exclusiva de artículos con herencia masónica. Tradición y calidad Hinojosa.">
+  <link rel="canonical" href="https://tu-usuario.github.io/tu-repositorio/">
+
   <style>
-    /* VARIABLES DE MARCA */
+    /* Definición de variables de marca para facilitar mantenimiento */
     :root {
-      --azul-fondo: #002147;   /* El azul de tu logo */
-      --azul-oscuro: #00152e;  /* Para secciones de contraste */
-      --dorado: #D4AF37;       /* Dorado para acentos y bordes */
-      --blanco-texto: #F5F5F5; /* Blanco suave para legibilidad */
+      --azul-marino: #002147;
+      --azul-oscuro: #00152e;
+      --dorado: #D4AF37;
+      --blanco-suave: #F5F5F5;
     }
 
-    /* ESTILOS BASE */
     body {
+      background-color: var(--azul-marino);
+      color: var(--blanco-suave);
       font-family: 'Georgia', serif;
       margin: 0;
-      background-color: var(--azul-fondo);
-      color: var(--blanco-texto);
+      padding: 0;
       line-height: 1.6;
     }
 
-    /* CABECERA Y LOGO */
+    /* Header: Mantenemos el bloque blanco para contraste del logo original */
     header {
-      background-color: white; /* Mantenemos el logo en bloque blanco para que destaque */
-      padding: 30px 20px;
+      background-color: #ffffff;
+      padding: 2rem 1rem;
       text-align: center;
       border-bottom: 4px solid var(--dorado);
     }
 
-    .logo-container img {
+    .logo-img {
       max-width: 300px;
       height: auto;
+      display: inline-block;
     }
 
-    /* NAVEGACIÓN */
+    /* Navegación Semántica */
     nav {
       background-color: var(--azul-oscuro);
+      padding: 1rem 0;
       text-align: center;
-      padding: 15px 0;
       border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     }
 
     nav a {
       color: var(--dorado);
       text-decoration: none;
+      margin: 0 1.5rem;
       text-transform: uppercase;
-      font-size: 0.9em;
+      font-size: 0.85rem;
       letter-spacing: 2px;
-      margin: 0 20px;
       font-weight: bold;
+      transition: opacity 0.3s ease;
     }
 
-    /* SECCIÓN HERO */
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Contenedor Principal */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
     .hero {
-      padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(180deg, var(--azul-oscuro) 0%, var(--azul-fondo) 100%);
+      margin-bottom: 4rem;
     }
 
     .hero h1 {
-      font-size: 2.5em;
       color: var(--dorado);
-      margin-bottom: 15px;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
-    /* GRID DE PRODUCTOS */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .section-title {
-      font-size: 2em;
-      text-align: center;
-      color: var(--dorado);
-      margin-bottom: 40px;
-    }
-
+    /* Grid de productos */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
-    /* TARJETAS DE PRODUCTO */
     .product-card {
       background-color: var(--azul-oscuro);
       border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 4px;
-      overflow: hidden;
-      transition: all 0.3s ease;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
 
     .product-card:hover {
-      border-color: var(--dorado);
       transform: translateY(-5px);
+      border-color: var(--dorado);
     }
 
-    .product-image {
+    .img-placeholder {
       width: 100%;
-      height: 250px;
-      background-color: rgba(255, 255, 255, 0.05);
+      height: 200px;
+      background-color: rgba(255,255,255,0.05);
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-    }
-
-    .product-details {
-      padding: 20px;
-      text-align: center;
+      color: var(--dorado);
+      border: 1px dashed var(--dorado);
     }
 
     .product-name {
-      font-size: 1.3em;
       color: var(--dorado);
-      margin: 0 0 10px 0;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
     }
 
-    .product-price {
-      font-size: 1.2em;
-      color: white;
+    .price {
+      display: block;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
     }
 
-    .btn-view {
+    .btn {
       display: inline-block;
-      background-color: transparent;
-      color: var(--dorado);
+      padding: 0.6rem 1.5rem;
       border: 1px solid var(--dorado);
-      padding: 8px 20px;
+      color: var(--dorado);
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 0.8rem;
       transition: all 0.3s;
     }
 
-    .btn-view:hover {
+    .btn:hover {
       background-color: var(--dorado);
-      color: var(--azul-fondo);
+      color: var(--azul-marino);
     }
 
-    /* PIE DE PÁGINA */
     footer {
-      background-color: var(--azul-oscuro);
-      color: var(--blanco-texto);
       text-align: center;
-      padding: 50px 20px;
+      padding: 4rem 1rem;
+      background-color: var(--azul-oscuro);
       border-top: 2px solid var(--dorado);
+      margin-top: 4rem;
     }
 
-    .footer-creed {
-      color: var(--dorado);
+    .motto {
       font-style: italic;
-      margin-bottom: 10px;
+      color: var(--dorado);
       display: block;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo-container">
-      <!-- Referencia exacta al archivo adjunto -->
-      <img src="ChatGPT Image May 4, 2026, 11_42_12 AM.png" alt="Logo Hinojosa Masonic Heritage">
-    </div>
+    <!-- Nombre de archivo normalizado para GitHub -->
+    <img src="image_0.png" alt="Hinojosa Masonic Heritage" class="logo-img">
   </header>
 
-  <nav aria-label="Menu principal">
-    <a href="#">Inicio</a>
-    <a href="#">Colección</a>
-    <a href="#">Contacto</a>
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Colección</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
-  <section class="hero">
-    <h1>Excelencia en Cada Detalle</h1>
-    <p>Tradición y Patrimonio Masónico</p>
-  </section>
+  <main id="inicio">
+    <section class="hero">
+      <h1>Patrimonio Masónico</h1>
+      <p>Excelencia, Tradición y Fraternidad en cada pieza.</p>
+    </section>
 
-  <main class="container">
-    <h2 class="section-title">Nuestros Productos</h2>
-    
-    <div class="product-grid">
-      <!-- Producto 1 -->
-      <article class="product-card">
-        <div class="product-image">Imagen del Producto</div>
-        <div class="product-details">
-          <h3 class="product-name">Anillo de Grado</h3>
-          <p class="product-price">$250.00</p>
-          <a href="#" class="btn-view">Ver Detalles</a>
-        </div>
-      </article>
+    <section id="productos">
+      <div class="product-grid">
+        <!-- Producto 1 -->
+        <article class="product-card">
+          <div class="img-placeholder" aria-hidden="true">Imagen del Producto</div>
+          <h2 class="product-name">Anillo de Sello</h2>
+          <span class="price">$299.00</span>
+          <a href="#" class="btn">Ver Detalles</a>
+        </article>
 
-      <!-- Producto 2 -->
-      <article class="product-card">
-        <div class="product-image">Imagen del Producto</div>
-        <div class="product-details">
-          <h3 class="product-name">Mandil de Gala</h3>
-          <p class="product-price">$450.00</p>
-          <a href="#" class="btn-view">Ver Detalles</a>
-        </div>
-      </article>
+        <!-- Producto 2 -->
+        <article class="product-card">
+          <div class="img-placeholder" aria-hidden="true">Imagen del Producto</div>
+          <h2 class="product-name">Mandil Maestro</h2>
+          <span class="price">$150.00</span>
+          <a href="#" class="btn">Ver Detalles</a>
+        </article>
 
-      <!-- Producto 3 -->
-      <article class="product-card">
-        <div class="product-image">Imagen del Producto</div>
-        <div class="product-details">
-          <h3 class="product-name">Mallete de Madera</h3>
-          <p class="product-price">$120.00</p>
-          <a href="#" class="btn-view">Ver Detalles</a>
-        </div>
-      </article>
-    </div>
+        <!-- Producto 3 -->
+        <article class="product-card">
+          <div class="img-placeholder" aria-hidden="true">Imagen del Producto</div>
+          <h2 class="product-name">Mallete Ceremonial</h2>
+          <span class="price">$85.00</span>
+          <a href="#" class="btn">Ver Detalles</a>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <span class="footer-creed">Faith • Hope • Charity</span>
+    <span class="motto">Faith • Hope • Charity</span>
     <p>&copy; 2026 Hinojosa Masonic Heritage. Todos los derechos reservados.</p>
   </footer>
 
