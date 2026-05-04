@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinojosa Masonic Heritage - Productos Exclusivos</title>
+    <style>
+        /* --- ESTILOS GENERALES Y COLORES --- */
+        :root {
+            --azul-marino: #002147; /* El color principal del escudo */
+            --dorado: #C5A059;       /* Un dorado elegante inspirado en el logo */
+            --dorado-oscuro: #96753B;
+            --blanco-crema: #FDFDFD;
+            --texto-oscuro: #333;
+            --fuente-titulos: 'Cormorant Garamond', serif; /* Elegante y tradicional */
+            --fuente-cuerpo: 'Source Sans Pro', sans-serif;
+        }
+
+        /* Importar fuentes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            margin: 0;
+            background-color: var(--blanco-crema);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* --- CABECERA Y LOGO --- */
+        header {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--dorado);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-container {
+            max-width: 350px; /* Ajusta según el tamaño de tu imagen */
+            margin: 0 auto;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            background-color: var(--azul-marino);
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--fuente-titulos);
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            margin: 0 20px;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--dorado);
+            border-bottom: 2px solid var(--dorado);
+        }
+
+        /* --- SECCIÓN HERO (Presentación) --- */
+        .hero {
+            background-color: #f4f4f4;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 3em;
+            color: var(--azul-marino);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* --- CUADRÍCULA DE PRODUCTOS --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-family: var(--fuente-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            color: var(--azul-marino);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* Adorno dorado debajo del título, estilo masónico */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--dorado);
+            margin: 15px auto 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-color: #eaeaea; /* Marcador de posición para imagen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: bold;
+            /* Aquí colocarías background-image: url('tu-producto.jpg'); */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-family: var(--fuente-titulos);
+            font-size: 1.4em;
+            color: var(--azul-marino);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .product-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--dorado-oscuro);
+            margin-bottom: 20px;
+        }
+
+        .btn-view {
+            display: inline-block;
+            background-color: var(--azul-marino);
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: var(--dorado);
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background-color: var(--azul-marino);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+            margin: 0 auto 20px;
+            filter: grayscale(1) brightness(2); /* Hace el logo plateado/blanco */
+        }
+
+        .footer-logo img {
+            max-width: 100%;
+        }
+
+        .footer-creeds {
+            font-family: var(--fuente-titulos);
+            font-style: italic;
+            font-size: 1.2em;
+            color: var(--dorado);
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            font-size: 0.9em;
+        }
+
+        /* --- RESPONSIVIDAD (Móviles) --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2em; }
+            nav a { margin: 0 10px; font-size: 1em; }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA: Tu Logo Aquí -->
+    <header>
+        <div class="logo-container">
+            <!-- *** IMPORTANTE: Cambia 'image_0.png' por el nombre real de tu archivo de logo *** -->
+            <img src="image_0.png" alt="Hinojosa Masonic Heritage Logo" />
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Colección</a>
+        <a href="#nosotros">Nuestra Herencia</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- SECCIÓN HERO DE BIENVENIDA -->
+    <section class="hero" id="inicio">
+        <h1>Artesanía de Excelencia</h1>
+        <p>Hinojosa Masonic Heritage presenta una colección exclusiva de artículos diseñados con el máximo respeto por la tradición, la fe, la esperanza y la caridad.</p>
+    </section>
+
+    <!-- CUADRÍCULA DE PRODUCTOS -->
+    <main class="container" id="productos">
+        <h2 class="section-title">Nuestra Colección</h2>
+        
+        <div class="product-grid">
+
+            <!-- PRODUCTO 1 -->
+            <div class="product-card">
+                <!-- Para añadir imagen real: style="background-image: url('imagen-producto-1.jpg');" -->
+                <div class="product-image">
+                    Imagen del Producto
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Anillo Masónico 'Escudo Hinojosa'</h3>
+                    <p class="product-description">Grabado a mano en oro de 18k con detalles en esmalte azul marino profundo.</p>
+                    <p class="product-price">$ 1,200.00</p>
+                    <a href="#" class="btn-view">Ver Detalles</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    Imagen del Producto
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Maletín de Regalia de Cuero Premium</h3>
+                    <p class="product-description">Cuero de grano completo con forro interior de terciopelo azul y herrajes dorados.</p>
+                    <p class="product-price">$ 450.00</p>
+                    <a href="#" class="btn-view">Ver Detalles</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    Imagen del Producto
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Medalla Conmemorativa del Patrimonio</h3>
+                    <p class="product-description">Edición limitada con el emblema de la Escuadra, el Compás y el Ojo que todo lo ve.</p>
+                    <p class="product-price">$ 180.00</p>
+                    <a href="#" class="btn-view">Ver Detalles</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 4 (Añade más bloques como este si los necesitas) -->
+            <div class="product-card">
+                <div class="product-image">
+                    Imagen del Producto
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Gemelos de Puño 'G' Dorados</h3>
+                    <p class="product-description">Elegancia discreta para ocasiones formales, bañados en oro de 24k.</p>
+                    <p class="product-price">$ 95.00</p>
+                    <a href="#" class="btn-view">Ver Detalles</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SECCIÓN NOSOTROS (Opcional) -->
+    <section id="nosotros" style="background-color: #e9e9e9; padding: 60px 0;">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <h2 class="section-title">Sobre Nuestra Herencia</h2>
+            <p>Hinojosa Masonic Heritage no es solo una marca; es una celebración de valores atemporales. Cada pieza que creamos está imbuida del simbolismo y la integridad de la francmasonería, diseñadas para aquellos que aprecian la historia y la artesanía de calidad.</p>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
+        <div class="footer-logo">
+            <!-- Logo repetido, tal vez en blanco y negro -->
+            <img src="image_0.png" alt="Hinojosa Masonic Heritage Footer" />
+        </div>
+        <p class="footer-creeds">Faith • Hope • Charity</p>
+        <p>Contacto: info@hinojosamasonic.com | Tel: (123) 456-7890</p>
+        <p class="copyright">&copy; 2023 Hinojosa Masonic Heritage. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
